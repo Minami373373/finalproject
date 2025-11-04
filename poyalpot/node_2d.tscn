@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjyq70da4h2wj"]
+
+[ext_resource type="Texture2D" uid="uid://bywy4j0h8pe4p" path="res://socky.png" id="1_wtcfe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0e48y"]
+radius = 86.00581
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(341, 191)
+shape = SubResource("CircleShape2D_0e48y")
+
+[node name="Socky" type="Sprite2D" parent="."]
+position = Vector2(333, 189)
+scale = Vector2(0.21055552, 0.2355556)
+texture = ExtResource("1_wtcfe")

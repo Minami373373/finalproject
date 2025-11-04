@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck58u4i7xkol8"]
+
+[ext_resource type="Texture2D" uid="uid://cdroh8kw7kssx" path="res://O2.png" id="1_1i3gi"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="O2" type="Sprite2D" parent="."]
+position = Vector2(581, 330)
+scale = Vector2(3.5875, 2.848214)
+texture = ExtResource("1_1i3gi")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
