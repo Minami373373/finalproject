@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck58u4i7xkol8"]
+
+[ext_resource type="Texture2D" uid="uid://c0wh0iadxits3" path="res://definativebg.jpeg" id="1_3qqdj"]
+[ext_resource type="PackedScene" uid="uid://d0xysc0j31jkd" path="res://socky.tscn" id="2_3qqdj"]
+[ext_resource type="PackedScene" uid="uid://v63ys0id0236" path="res://player.tscn" id="3_dqtar"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="O2" type="Sprite2D" parent="."]
+position = Vector2(593.34534, 329.99997)
+scale = Vector2(1.4748023, 1.1464286)
+texture = ExtResource("1_3qqdj")
+
+[node name="Node2D2" parent="." instance=ExtResource("2_3qqdj")]
+
+[node name="Node2D" parent="." instance=ExtResource("3_dqtar")]

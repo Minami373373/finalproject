@@ -14,6 +14,6 @@ position = Vector2(341, 191)
 shape = SubResource("CircleShape2D_0e48y")
 
 [node name="Socky" type="Sprite2D" parent="."]
-position = Vector2(333, 189)
+position = Vector2(348, 189)
 scale = Vector2(0.21055552, 0.2355556)
 texture = ExtResource("1_wtcfe")
