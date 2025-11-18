@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://71jgpjrnvmnq"]
+
+[ext_resource type="Script" uid="uid://pym4vvq4qto1" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://ij4nope370fh" path="res://icon.svg" id="1_xhfnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhfnw"]
+size = Vector2(123, 125)
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_kpjcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_xhfnw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xhfnw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -45.0
+offset_top = 57.0
+offset_right = 40.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 28
+text = "Player"
+horizontal_alignment = 1
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="gui_input" from="Label" to="." method="_on_label_gui_input"]

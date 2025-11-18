@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c76dr23y4n0sv"]
+
+[ext_resource type="Texture2D" uid="uid://bmdupchmp5fc1" path="res://images/[CITYPNG.COM]Black Outline Soccer Ball Icon Transparent PNG - 800x800.png" id="1_gk6bx"]
+[ext_resource type="Script" uid="uid://c168ns2a87i0b" path="res://ball.gd" id="1_lww6v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gk6bx"]
+radius = 33.13608
+
+[node name="Ball" type="Area2D"]
+script = ExtResource("1_lww6v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_gk6bx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gk6bx")

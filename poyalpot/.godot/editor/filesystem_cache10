@@ -1,0 +1,13 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1763315928
+ball.gd::GDScript::6663774875608342851::1762878865::0::1::::<>Area2D<><>0<>0<><>::
+Ball.tscn::PackedScene::7083094046168496021::1762885257::0::1::::<><><>0<>0<><>::uid://bmdupchmp5fc1::::res://images/[CITYPNG.COM]Black Outline Soccer Ball Icon Transparent PNG - 800x800.png<>uid://c168ns2a87i0b::::res://ball.gd
+icon.svg::CompressedTexture2D::581874915721202325::1762294211::1762295636::1::::<><><>0<>0<>05557cce7c4ab3c6ccd22dcc66f31f15<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+match.gd::GDScript::2133591572143095609::1762901137::0::1::::<>Node2D<><>0<>0<><>::
+Match.tscn::PackedScene::4530169294919314998::1762895790::0::1::::<><><>0<>0<><>::uid://5nr7alul3c0p::::res://match.gd<>uid://c76dr23y4n0sv::::res://Ball.tscn<>uid://do6nbm78l1lij::::res://UI.tscn
+player.gd::GDScript::1103159248801977554::1762891384::0::1::::<>Area2D<><>0<>0<><>::
+Player.tscn::PackedScene::2300274788265024210::1762900675::0::1::::<><><>0<>0<><>::uid://pym4vvq4qto1::::res://player.gd<>uid://ij4nope370fh::::res://icon.svg
+ui.gd::GDScript::8504251944587135166::1762891299::0::1::::<>CanvasLayer<><>0<>0<><>::
+UI.tscn::PackedScene::8206693360316525157::1762891898::0::1::::<><><>0<>0<><>::uid://dtfr1023w78tu::::res://ui.gd
+::res://images/::1762879587
+[CITYPNG.COM]Black Outline Soccer Ball Icon Transparent PNG - 800x800.png::CompressedTexture2D::3236121183802358034::1762877020::1762877039::1::::<><><>0<>0<>8f04f772c9e3a5f4d897d0ec5bc52e69<>res://.godot/imported/[CITYPNG.COM]Black Outline Soccer Ball Icon Transparent PNG - 800x800.png-c35b929645b28ec3b1f2c056fff8b7c8.ctex::
