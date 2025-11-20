@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c76dr23y4n0sv"]
+
+[ext_resource type="Texture2D" uid="uid://d2qs33efsnxkq" path="res://images/socky.png" id="1_gk6bx"]
+[ext_resource type="Script" uid="uid://dettdp1mf5072" path="res://ball.gd" id="1_lww6v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lww6v"]
+radius = 30.149628
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_lww6v")
+
+[node name="Socky" type="Sprite2D" parent="."]
+visibility_layer = 3
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_gk6bx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lww6v")
