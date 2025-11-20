@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Godot 4+ specific ignores
 .godot/
 .nomedia
@@ -18,3 +19,8 @@ mono_crash.*.json
 
 # Mac-specific ignores
 *.DS_Store
+=======
+*.cfg
+*.cache
+*.res
+>>>>>>> Stashed changes

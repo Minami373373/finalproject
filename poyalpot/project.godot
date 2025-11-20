@@ -12,7 +12,11 @@ config_version=5
 
 config/name="poyalpot"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 run/main_scene="res://tilemap.tscn"
+=======
+run/main_scene="uid://b5sphx0i67do5"
+>>>>>>> Stashed changes
 =======
 run/main_scene="uid://b5sphx0i67do5"
 >>>>>>> Stashed changes
