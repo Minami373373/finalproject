@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://djp568b3we0ge"]
+
+[ext_resource type="PackedScene" uid="uid://v63ys0id0236" path="res://scenes/player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://d0xysc0j31jkd" path="res://scenes/socky.tscn" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bb23jun5swimi" path="res://images/definativebg.jpeg" id="3_h2yge"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(1184, 638)
+
+[node name="Background" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-15, -5)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Player" parent="." instance=ExtResource("2_h2yge")]
+position = Vector2(2, -2)
+
+[node name="Ball" parent="." instance=ExtResource("3_1bvp3")]
+position = Vector2(-663, -411)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Definativebg" type="Sprite2D" parent="."]
+position = Vector2(-13.749939, 1.5000181)
+scale = Vector2(1.4683622, 1.1517857)
+texture = ExtResource("3_h2yge")

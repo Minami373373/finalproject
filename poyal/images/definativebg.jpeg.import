@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btv4y6aasyyax"
-path="res://.godot/imported/footballer.png-b6b06e943009a415504ef53bf2322292.ctex"
+uid="uid://bb23jun5swimi"
+path="res://.godot/imported/definativebg.jpeg-4de114e240129561377d6782d2f93a9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://footballer.png"
-dest_files=["res://.godot/imported/footballer.png-b6b06e943009a415504ef53bf2322292.ctex"]
+source_file="res://images/definativebg.jpeg"
+dest_files=["res://.godot/imported/definativebg.jpeg-4de114e240129561377d6782d2f93a9c.ctex"]
 
 [params]
 

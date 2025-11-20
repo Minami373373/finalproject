@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://v63ys0id0236"]
+
+[ext_resource type="Script" uid="uid://byo7htxy15m3v" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" path="res://footballer.png" id="2_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(56, 104)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(681, 429)
+texture = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(677, 434)
+shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="Camera2D" type="Camera2D" parent="."]

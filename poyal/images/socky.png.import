@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bywy4j0h8pe4p"
-path="res://.godot/imported/socky.png-a8577ff600437571de780f6f46e0b255.ctex"
+uid="uid://d2qs33efsnxkq"
+path="res://.godot/imported/socky.png-c45c41f212a8ede7472884b7a7afc44a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://socky.png"
-dest_files=["res://.godot/imported/socky.png-a8577ff600437571de780f6f46e0b255.ctex"]
+source_file="res://images/socky.png"
+dest_files=["res://.godot/imported/socky.png-c45c41f212a8ede7472884b7a7afc44a.ctex"]
 
 [params]
 
