@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn0n3wa3o676h"]
+[gd_scene load_steps=4 format=3 uid="uid://bn0n3wa3o676h"]
 
 [ext_resource type="Texture2D" uid="uid://byqiw3xu2gvjd" path="res://images/footballer.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://565u6lm8x3gg" path="res://player.gd" id="1_onrkg"]
@@ -6,10 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(61, 101.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(76, 115)
-
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 input_pickable = true
 script = ExtResource("1_onrkg")
 
@@ -20,11 +17,3 @@ texture = ExtResource("1_4flbx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3.5, 6.25)
 shape = SubResource("RectangleShape2D_4flbx")
-
-[node name="BallDetector" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BallDetector"]
-position = Vector2(3, 6.5)
-shape = SubResource("RectangleShape2D_onrkg")
-
-[connection signal="body_entered" from="BallDetector" to="." method="_on_ball_detector_body_entered"]

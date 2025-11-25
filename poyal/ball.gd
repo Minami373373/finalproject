@@ -1,11 +1,19 @@
-extends RigidBody2D
+extends CharacterBody2D
+var is_dribbled := false
+var player: CharacterBody2D = null  # the player dribbling the ball
 
+func _physics_process(delta):
+	if not is_dribbled:
+		move_and_slide()
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func follow_player(target_pos: Vector2):
+	# Override physics while dribbled
+	global_position = global_position.lerp(target_pos, 0.3)
 
+func start_dribble(p: Node2D):
+	is_dribbled = true
+	player = p
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func stop_dribble():
+	is_dribbled = false
+	player = null

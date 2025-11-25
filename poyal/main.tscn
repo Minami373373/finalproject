@@ -1,19 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://djp568b3we0ge"]
+[gd_scene load_steps=7 format=3 uid="uid://djp568b3we0ge"]
 
+[ext_resource type="Texture2D" uid="uid://4lisse1ciokc" path="res://images/soccerfield.png" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://b8qprpqfjln8l" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c76dr23y4n0sv" path="res://Ball.tscn" id="3_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://bb23jun5swimi" path="res://images/definativebg.jpeg" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bn0n3wa3o676h" path="res://player.tscn" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://dbl0ocerpcl42" path="res://GoalArea.gd" id="4_1bvp3"]
 
-[node name="Game" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(145.5, 320)
 
-[node name="Definativebg" type="Sprite2D" parent="."]
-position = Vector2(579.5, 323.5)
-scale = Vector2(1.4280397, 1.1517857)
-texture = ExtResource("3_h2yge")
+[node name="Main" type="Node2D"]
+script = ExtResource("1_lquwl")
 
-[node name="RigidBody2D" parent="." instance=ExtResource("3_1bvp3")]
+[node name="GoalLeft" type="Area2D" parent="."]
+script = ExtResource("4_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalLeft"]
+position = Vector2(77.25, 327)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="GoalRight" type="Area2D" parent="."]
+script = ExtResource("4_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalRight"]
+position = Vector2(1069, 323)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Soccerfield" type="Sprite2D" parent="."]
+position = Vector2(576.5, 325.5)
+scale = Vector2(1.4496222, 1.1806569)
+texture = ExtResource("1_h2yge")
+
+[node name="Ball" parent="." instance=ExtResource("3_1bvp3")]
 visibility_layer = 3
-position = Vector2(556, 211)
+position = Vector2(571, 324)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_lquwl")]
-position = Vector2(560, 330)
+[node name="Player" parent="." instance=ExtResource("3_lquwl")]
+position = Vector2(225, 317)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 402.0
+offset_top = -3.0
+offset_right = 744.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 48
+text = "0 : 0"
+horizontal_alignment = 1
+
+[connection signal="goal_scored" from="GoalLeft" to="." method="_on_goal_left_goal_scored"]
+[connection signal="goal_scored" from="GoalRight" to="." method="_on_goal_right_goal_scored"]
