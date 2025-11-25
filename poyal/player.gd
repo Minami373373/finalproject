@@ -23,7 +23,3 @@ func shoot_ball():
 	var shot_power := 1500.0
 	dribbled_ball.velocity = direction * shot_power
 	dribbled_ball = null
-
-func _input(event):
-	if event.is_action_pressed("shoot"):
-		shoot_ball()

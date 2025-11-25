@@ -21,6 +21,7 @@ shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="GoalRight" type="Area2D" parent="."]
 script = ExtResource("4_1bvp3")
+side = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoalRight"]
 position = Vector2(1069, 323)
@@ -49,5 +50,7 @@ theme_override_font_sizes/font_size = 48
 text = "0 : 0"
 horizontal_alignment = 1
 
-[connection signal="goal_scored" from="GoalLeft" to="." method="_on_goal_left_goal_scored"]
-[connection signal="goal_scored" from="GoalRight" to="." method="_on_goal_right_goal_scored"]
+[connection signal="body_entered" from="GoalLeft" to="GoalLeft" method="_on_body_entered"]
+[connection signal="goal_scored" from="GoalLeft" to="." method="_on_goal_scored"]
+[connection signal="body_entered" from="GoalRight" to="GoalRight" method="_on_body_entered"]
+[connection signal="goal_scored" from="GoalRight" to="." method="_on_goal_scored"]

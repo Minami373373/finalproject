@@ -17,3 +17,4 @@ func start_dribble(p: Node2D):
 func stop_dribble():
 	is_dribbled = false
 	player = null
+	velocity = Vector2.ZERO

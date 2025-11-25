@@ -7,6 +7,7 @@
 size = Vector2(61, 101.5)
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 0
 input_pickable = true
 script = ExtResource("1_onrkg")
 
