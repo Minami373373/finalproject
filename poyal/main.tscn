@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://djp568b3we0ge"]
+[gd_scene load_steps=9 format=3 uid="uid://djp568b3we0ge"]
 
 [ext_resource type="Texture2D" uid="uid://4lisse1ciokc" path="res://images/soccerfield.png" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://b8qprpqfjln8l" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c76dr23y4n0sv" path="res://Ball.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bn0n3wa3o676h" path="res://player.tscn" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://dbl0ocerpcl42" path="res://GoalArea.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dds6y1bdhs55c" path="res://images/settings-icon-7.png" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://8286el21dmon" path="res://Plan B.mp3" id="7_272bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(145.5, 320)
@@ -50,7 +52,25 @@ theme_override_font_sizes/font_size = 48
 text = "0 : 0"
 horizontal_alignment = 1
 
+[node name="Settings" type="Button" parent="."]
+offset_left = 1045.0
+offset_top = 12.000122
+offset_right = 1266.4287
+offset_bottom = 155.00012
+scale = Vector2(0.4, 0.4)
+theme_override_font_sizes/font_size = 48
+text = "Settings
+"
+icon = ExtResource("6_7mycd")
+icon_alignment = 1
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_272bh")
+volume_db = -5.0
+autoplay = true
+
 [connection signal="body_entered" from="GoalLeft" to="GoalLeft" method="_on_body_entered"]
 [connection signal="goal_scored" from="GoalLeft" to="." method="_on_goal_scored"]
 [connection signal="body_entered" from="GoalRight" to="GoalRight" method="_on_body_entered"]
 [connection signal="goal_scored" from="GoalRight" to="." method="_on_goal_scored"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

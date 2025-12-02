@@ -13,7 +13,8 @@ func _physics_process(delta):
 	else:
 		velocity = Vector2.ZERO
 	move_and_slide()
-
+	
+	
 func shoot_ball():
 	if not is_dribbling or dribbled_ball == null:
 		return

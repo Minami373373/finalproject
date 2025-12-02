@@ -1,0 +1,97 @@
+[gd_scene load_steps=3 format=3 uid="uid://unjvluowr0yb"]
+
+[ext_resource type="Script" uid="uid://1g1ylu38d6yi" path="res://settings_menu.gd" id="1_ufg0w"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ufg0w"]
+color = Color(1.0039216, 1.0039216, 1.0039216, 1)
+thickness = 5
+
+[node name="SettingsMenu" type="CanvasLayer"]
+script = ExtResource("1_ufg0w")
+
+[node name="SettingsLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.0
+offset_top = 125.0
+offset_right = 116.0
+offset_bottom = 294.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "Settings
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackToMain" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.5
+offset_top = 74.5
+offset_right = 152.5
+offset_bottom = 127.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Back to Main Menu"
+
+[node name="Quit" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.5
+offset_top = 141.5
+offset_right = 152.5
+offset_bottom = 194.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit Game
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -49.0
+offset_right = 151.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+theme_override_styles/separator = SubResource("StyleBoxLine_ufg0w")
+
+[node name="MusicVolumeLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+ticks_position = 3
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxLine_ufg0w")
+
+[connection signal="pressed" from="BackToMain" to="." method="_on_back_to_main_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]

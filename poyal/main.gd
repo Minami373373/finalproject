@@ -30,3 +30,7 @@ func _on_goal_left_body_entered(body: Node2D) -> void:
 
 func _on_goal_left_goal_scored(side: String) -> void:
 	pass # Replace with function body.
+
+
+func _on_settings_pressed() -> void:
+	get_tree().change_scene_to_file("res://settings_menu.tscn")

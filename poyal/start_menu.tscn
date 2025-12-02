@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://bobfiyf3un6sg"]
+
+[ext_resource type="Texture2D" uid="uid://4lisse1ciokc" path="res://images/soccerfield.png" id="1_ia0g5"]
+[ext_resource type="Script" uid="uid://b7qis0w36omgl" path="res://StartMenu.gd" id="1_jwbto"]
+[ext_resource type="AudioStream" uid="uid://8286el21dmon" path="res://Plan B.mp3" id="3_vpdu5"]
+
+[node name="StartMenu" type="CanvasLayer"]
+script = ExtResource("1_jwbto")
+
+[node name="Soccerfield" type="Sprite2D" parent="."]
+position = Vector2(577.5, 323)
+scale = Vector2(1.452141, 1.1824818)
+texture = ExtResource("1_ia0g5")
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -123.5
+offset_top = 120.0
+offset_right = 123.5
+offset_bottom = 187.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Soccer 101"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.5
+offset_top = -149.5
+offset_right = 233.5
+offset_bottom = 293.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Playgame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Play Game!"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vpdu5")
+volume_db = -5.0
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Playgame" to="." method="_on_playgame_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
